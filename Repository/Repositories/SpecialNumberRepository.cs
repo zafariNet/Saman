@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Model.Customers;
+using Infrastructure.UnitOfWork;
+using Model.Customers.Interfaces;
+
+namespace Repository.Repositories
+{
+    public class SpecialNumberRepository : Repository<SpecialNumber>, ISpecialNumberRepository
+    {
+        public SpecialNumberRepository(IUnitOfWork uow)
+            : base(uow)
+        {
+        }
+    }
+}

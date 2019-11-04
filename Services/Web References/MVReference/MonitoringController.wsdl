@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:MonitoringControllerwsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="MonitoringController" targetNamespace="urn:MonitoringControllerwsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:MonitoringControllerwsdl">
+      <xsd:complexType name="DeviceWSDLArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute wsdl:arrayType="tns:DeviceWSDL[]" ref="soap-enc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="DeviceWSDL">
+        <xsd:all>
+          <xsd:element name="dialString" type="xsd:string" />
+          <xsd:element name="name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="QueueWSDLArray">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soap-enc:Array">
+            <xsd:attribute wsdl:arrayType="tns:QueueWSDL[]" ref="soap-enc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="QueueWSDL">
+        <xsd:all>
+          <xsd:element name="name" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="loginRequest">
+    <wsdl:part name="name" type="xsd:string" />
+    <wsdl:part name="password" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDeviceRequest">
+    <wsdl:part name="session" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDeviceResponse">
+    <wsdl:part name="return" type="tns:DeviceWSDLArray" />
+  </wsdl:message>
+  <wsdl:message name="getQueueRequest">
+    <wsdl:part name="session" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getQueueResponse">
+    <wsdl:part name="return" type="tns:QueueWSDLArray" />
+  </wsdl:message>
+  <wsdl:portType name="MonitoringControllerPortType">
+    <wsdl:operation name="login">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:loginRequest" />
+      <wsdl:output message="tns:loginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDevice">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:getDeviceRequest" />
+      <wsdl:output message="tns:getDeviceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getQueue">
+      <wsdl:documentation>
+      </wsdl:documentation>
+      <wsdl:input message="tns:getQueueRequest" />
+      <wsdl:output message="tns:getQueueResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MonitoringControllerBinding" type="tns:MonitoringControllerPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="login">
+      <soap:operation soapAction="urn:MonitoringControllerwsdl#login" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDevice">
+      <soap:operation soapAction="urn:MonitoringControllerwsdl#getDevice" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getQueue">
+      <soap:operation soapAction="urn:MonitoringControllerwsdl#getQueue" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:MonitoringControllerwsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MonitoringControllerService">
+    <wsdl:port name="MonitoringControllerPort" binding="tns:MonitoringControllerBinding">
+      <soap:address location="http://192.168.16.110/mv-bootstrap/webservice/monitoring/wsdl?ws=1" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

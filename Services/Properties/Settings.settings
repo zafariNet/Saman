@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Services.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ort_MVReference_MonitoringControllerService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.16.110/mv-bootstrap/webservice/monitoring/wsdl?ws=1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

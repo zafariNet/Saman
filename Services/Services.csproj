@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F336D7EA-C530-4BF2-8563-9132A19EF63E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Services</RootNamespace>
+    <AssemblyName>ort</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapperBootStrapper.cs" />
+    <Compile Include="Implementations\AgencyService.cs" />
+    <Compile Include="Implementations\AnswerService.cs" />
+    <Compile Include="Implementations\AppPath.cs" />
+    <Compile Include="Implementations\BonusComissionService.cs" />
+    <Compile Include="Implementations\CallLogService.cs" />
+    <Compile Include="Implementations\CampaignAgentService.cs" />
+    <Compile Include="Implementations\CampaignPaymentService.cs" />
+    <Compile Include="Implementations\CenterService.cs" />
+    <Compile Include="Implementations\CityService.cs" />
+    <Compile Include="Implementations\CodeService.cs" />
+    <Compile Include="Implementations\ConditionService.cs" />
+    <Compile Include="Implementations\BuyPossibilityService.cs" />
+    <Compile Include="Implementations\CourierEmployeeService.cs" />
+    <Compile Include="Implementations\CourierService.cs" />
+    <Compile Include="Implementations\CustomerContactTemplateService.cs" />
+    <Compile Include="Implementations\FilterUtilityService.cs" />
+    <Compile Include="Implementations\QuestionAnswerService.cs" />
+    <Compile Include="Implementations\QuestionService.cs" />
+    <Compile Include="Implementations\LeadResultTemplateService.cs" />
+    <Compile Include="Implementations\LeadTitleTemplateService.cs" />
+    <Compile Include="Implementations\LocalPhoneStoreEmployeeService.cs" />
+    <Compile Include="Implementations\LocalPhoneService.cs" />
+    <Compile Include="Implementations\FollowStatusService.cs" />
+    <Compile Include="Implementations\LocalPhoneStoreService.cs" />
+    <Compile Include="Implementations\MainMenuService.cs" />
+    <Compile Include="Implementations\CreditSaleDetailService.cs" />
+    <Compile Include="Implementations\CreditServiceService.cs" />
+    <Compile Include="Implementations\CustomerLevelService.cs" />
+    <Compile Include="Implementations\CustomerService.cs" />
+    <Compile Include="Implementations\MessageTemplateService.cs" />
+    <Compile Include="Implementations\MVProxyClass.cs" />
+    <Compile Include="Implementations\NegotiationService.cs" />
+    <Compile Include="Implementations\NetworkCenterPriorityService.cs" />
+    <Compile Include="Implementations\NotificationService.cs" />
+    <Compile Include="Implementations\ProvinceService.cs" />
+    <Compile Include="Implementations\QueueLocalPhoneStoreService.cs" />
+    <Compile Include="Implementations\QueueService.cs" />
+    <Compile Include="Implementations\SmsEmployeeService.cs" />
+    <Compile Include="Implementations\SuctionModeDetailService.cs" />
+    <Compile Include="Implementations\SupportDeliverServiceService.cs" />
+    <Compile Include="Implementations\SupportExpertDispatchService.cs" />
+    <Compile Include="Implementations\SupportInstallationDelayService.cs" />
+    <Compile Include="Implementations\SupportPhoneInstallationService.cs" />
+    <Compile Include="Implementations\SupportQcProblemService.cs" />
+    <Compile Include="Implementations\SupportQcService.cs" />
+    <Compile Include="Implementations\SupportService.cs" />
+    <Compile Include="Implementations\SupportStatusRelationService.cs" />
+    <Compile Include="Implementations\SupportStatusService.cs" />
+    <Compile Include="Implementations\SupportTicketWaitingResponseService.cs" />
+    <Compile Include="Implementations\SupportTicketWaitingService.cs" />
+    <Compile Include="Implementations\TaskService.cs" />
+    <Compile Include="Implementations\ToDoResultService.cs" />
+    <Compile Include="Implementations\ToDoService.cs" />
+    <Compile Include="Interfaces\IAnswerService.cs" />
+    <Compile Include="Interfaces\IBonusComissionService.cs" />
+    <Compile Include="Interfaces\ICallLogService.cs" />
+    <Compile Include="Interfaces\ICampaignAgentService.cs" />
+    <Compile Include="Interfaces\ICampaignPaymentService.cs" />
+    <Compile Include="Interfaces\ICityService.cs" />
+    <Compile Include="Interfaces\ICourierEmployeeService.cs" />
+    <Compile Include="Interfaces\ICourierService.cs" />
+    <Compile Include="Interfaces\ICustomerContactTemplateService.cs" />
+    <Compile Include="Interfaces\ILeadResultTemplateService.cs" />
+    <Compile Include="Interfaces\ILeadTitleTemplateService.cs" />
+    <Compile Include="Interfaces\ILocalPhoneStoreEmployeeService.cs" />
+    <Compile Include="Interfaces\ILocalPhoneService.cs" />
+    <Compile Include="Interfaces\IBuyPossibilityService.cs" />
+    <Compile Include="Interfaces\IFollowStatusService.cs" />
+    <Compile Include="Interfaces\ILocalPhoneStoreService.cs" />
+    <Compile Include="Interfaces\IMainMenuService.cs" />
+    <Compile Include="Interfaces\IMessageTemplateService.cs" />
+    <Compile Include="Interfaces\INegotiationService.cs" />
+    <Compile Include="Interfaces\INetworkCenterPriorityService.cs" />
+    <Compile Include="Interfaces\INotificationService.cs" />
+    <Compile Include="Interfaces\IProvinceService.cs" />
+    <Compile Include="Interfaces\IQuestionAnswerService.cs" />
+    <Compile Include="Interfaces\IQuestionService.cs" />
+    <Compile Include="Interfaces\IQueueEmployeeService.cs" />
+    <Compile Include="Interfaces\IQueueLocalPhoneStoreService.cs" />
+    <Compile Include="Interfaces\IQueueService.cs" />
+    <Compile Include="Interfaces\ISmsEmployeeService.cs" />
+    <Compile Include="Interfaces\ISmsWebService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ISuctionModeDetailService.cs" />
+    <Compile Include="Interfaces\ISupportDeliverServiceService.cs" />
+    <Compile Include="Interfaces\ISupportExpertDispatchService.cs" />
+    <Compile Include="Interfaces\ISupportInstallationDelayService.cs" />
+    <Compile Include="Interfaces\ISupportPhoneInstallationService.cs" />
+    <Compile Include="Interfaces\ISupportQcProblemService.cs" />
+    <Compile Include="Interfaces\ISupportQcService.cs" />
+    <Compile Include="Interfaces\ISupportService.cs" />
+    <Compile Include="Interfaces\ISupportStatusRelationService.cs" />
+    <Compile Include="Interfaces\ISupportStatusService.cs" />
+    <Compile Include="Interfaces\ISupportTicketWaitingResponseService.cs" />
+    <Compile Include="Interfaces\ISupportTicketWaitingService.cs" />
+    <Compile Include="Interfaces\ITaskService.cs" />
+    <Compile Include="Interfaces\IToDoResultService.cs" />
+    <Compile Include="Interfaces\IToDoService.cs" />
+    <Compile Include="Mapping\AnswerMapper.cs" />
+    <Compile Include="Mapping\AnswerQuestionMapper.cs" />
+    <Compile Include="Mapping\BonusComissionMapper.cs" />
+    <Compile Include="Mapping\BuyPossibilityMapper.cs" />
+    <Compile Include="Mapping\CallLogMapper.cs" />
+    <Compile Include="Mapping\CampaignAgentMapper.cs" />
+    <Compile Include="Mapping\CampaignPaymentMaper.cs" />
+    <Compile Include="Mapping\CityMapper.cs" />
+    <Compile Include="Mapping\CourierEmployeeMapper.cs" />
+    <Compile Include="Mapping\CourierMapper.cs" />
+    <Compile Include="Mapping\CustomerContactTemplateMapper.cs" />
+    <Compile Include="Mapping\LeadResultTemplateMapper.cs" />
+    <Compile Include="Mapping\LeadTitleTemplateMapper.cs" />
+    <Compile Include="Mapping\LocalPhoneEmployeeMapper.cs" />
+    <Compile Include="Mapping\LocalPhoneMapper.cs" />
+    <Compile Include="Mapping\FollowStatusMapper.cs" />
+    <Compile Include="Mapping\GraphicalPropertiesMapper.cs" />
+    <Compile Include="Mapping\LocalPhoneStoreMapper.cs" />
+    <Compile Include="Mapping\MainMenuMapper.cs" />
+    <Compile Include="Mapping\MessageTemplateMapper.cs" />
+    <Compile Include="Mapping\NegotiationMapper.cs" />
+    <Compile Include="Mapping\NetworkCenterPriorityMapper.cs" />
+    <Compile Include="Mapping\NotificationMapper.cs" />
+    <Compile Include="Mapping\OwnSupportMapper.cs" />
+    <Compile Include="Mapping\PermitMapper.cs" />
+    <Compile Include="Mapping\ProvinceMapper.cs" />
+    <Compile Include="Mapping\QuestionAnswerMapper.cs" />
+    <Compile Include="Mapping\QuestionMapper.cs" />
+    <Compile Include="Mapping\QueueLocalPhoneMapper.cs" />
+    <Compile Include="Mapping\QueueMapper.cs" />
+    <Compile Include="Mapping\SimpleCustomerMapper.cs" />
+    <Compile Include="Mapping\SimpleEmployeeMapper.cs" />
+    <Compile Include="Mapping\SmsEmployeeMapper.cs" />
+    <Compile Include="Mapping\SuctionModeDetailMapper.cs" />
+    <Compile Include="Mapping\SupportDeliverServiceMapper.cs" />
+    <Compile Include="Mapping\SupportExpertDispatchMapper.cs" />
+    <Compile Include="Mapping\SupportInstallationDelayMapper.cs" />
+    <Compile Include="Mapping\SupportMapper.cs" />
+    <Compile Include="Mapping\SupportPhoneInstallationMapper.cs" />
+    <Compile Include="Mapping\SupportQcMapper.cs" />
+    <Compile Include="Mapping\SupportQcProblemMapper.cs" />
+    <Compile Include="Mapping\SupportStatusMapper.cs" />
+    <Compile Include="Mapping\SupportStatusRelationMapper.cs" />
+    <Compile Include="Mapping\SupportTicketWaitingMapper.cs" />
+    <Compile Include="Mapping\SupportTicketWaitingResponseMapper.cs" />
+    <Compile Include="Mapping\SystemCountersMapper.cs" />
+    <Compile Include="Mapping\TaskMapper.cs" />
+    <Compile Include="Mapping\ToDoMapper.cs" />
+    <Compile Include="Mapping\ToDoResultMapper.cs" />
+    <Compile Include="Mapping\VoipMapper.cs" />
+    <Compile Include="Messaging\AdvancedSearchRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCityRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCourierEmployeeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCustomerContactTemplateRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddMessageTemplateRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddNetworkCenterPriorityRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddProvinceRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddSuctionModeDetailrequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCityRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCourierEmployeeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCustomerContactTemplateRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditProvinceRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditSuctionModeDetailRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCitiesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCityResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetFollowStatusResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetFollowStatussResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetBuyPossibilitiesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetBuyPossibilityResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetProvinceResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetProvincesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\QueryEmployeeDeleteRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\SendSmsRequest.cs" />
+    <Compile Include="Messaging\EditeMessageTemplateRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddBonusComissionRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddCampaignAgentRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddLocalPhoneStoreEmployeeRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddLocalPhoneRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddLocalPhoneStoreRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddNotificationRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddQueueLocalPhoneRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddQueueRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddSmsEmployeerequet.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddTaskRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddToDoAttachmentRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddToDoRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddToDoResulRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddToDoResultAttachmentRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditCampaignAgentRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditGroupPermissionsRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditLocalPhoneEmployeeRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditLocalPhoneStoreRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditNotificationRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditQueueLocalPhone.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditQueueRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditToDoResultRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\AddFiscalByVoipRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\DeleteMoneyAccountEmployeeRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\AddLeadResultTemplateRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\AddLeadTitleTemplateRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\AddNegotiationRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\ChangeNegotiationReferedEmployeeRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\EditLeadResultTemplateRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\EditLeadTitleTemplateRequest.cs" />
+    <Compile Include="Messaging\Leadcatalogservice\EditNegotiationRequest.cs" />
+    <Compile Include="Messaging\ReportCatalogService\GetBonusComissionRequest.cs" />
+    <Compile Include="Messaging\ReportCatalogService\GetNetworkReportView.cs" />
+    <Compile Include="Messaging\ReportCatalogService\GetSuctionModeRequest.cs" />
+    <Compile Include="Messaging\ReportCatalogService\GetsuctionModeRequestForReport3.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddCampignPaymentRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddCourierRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditCampignPaymentRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditCourierRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\SaleReportRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductLogStoreRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportDeliverServiceRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportExpertDispatchRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportInstallationDelayRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportPhoneInstallationRequst.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportQcProblemRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportQcRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportStatusRelationRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportStatusRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportTicketWaitingRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddSupportTicketWaitingResponseRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportDeliverServiceRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportExpertDispatchRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportInstallationDelayRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportPhoneInstallationRequst.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportQcProblemRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportQcRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportStatusRelationRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportStatusRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportTicketWaitingRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditSupportTicketWaitingResponseRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditLocalPhoneRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditSimpleEmployeeRequest.cs" />
+    <Compile Include="Messaging\MainMenusGetRequest.cs" />
+    <Compile Include="Messaging\GetMainMenuResponse.cs" />
+    <Compile Include="Messaging\GeneralResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetQueriesRequest.cs" />
+    <Compile Include="Messaging\QuickSearchRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddSaleDetailBaseRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\DeliverRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\DeliverResponse.cs" />
+    <Compile Include="Implementations\DocumentService.cs" />
+    <Compile Include="Implementations\DocumentStatusService.cs" />
+    <Compile Include="Implementations\EmailService.cs" />
+    <Compile Include="Implementations\EmployeeService.cs" />
+    <Compile Include="Implementations\FiscalService.cs" />
+    <Compile Include="Implementations\GroupService.cs" />
+    <Compile Include="Implementations\LevelConditionService.cs" />
+    <Compile Include="Implementations\LevelLevelService.cs" />
+    <Compile Include="Implementations\LevelService.cs" />
+    <Compile Include="Implementations\LevelTypeService.cs" />
+    <Compile Include="Implementations\MoneyAccountEmployeeService.cs" />
+    <Compile Include="Implementations\MoneyAccountService.cs" />
+    <Compile Include="Implementations\NetworkCenterService.cs" />
+    <Compile Include="Implementations\NetworkCreditService.cs" />
+    <Compile Include="Implementations\NetworkService.cs" />
+    <Compile Include="Implementations\NoteService.cs" />
+    <Compile Include="Implementations\PermissionService.cs" />
+    <Compile Include="Implementations\PersenceSupportService.cs" />
+    <Compile Include="Implementations\ProblemService.cs" />
+    <Compile Include="Implementations\ProductCategoryService.cs" />
+    <Compile Include="Implementations\ProductLogService.cs" />
+    <Compile Include="Implementations\ProductPriceService.cs" />
+    <Compile Include="Implementations\ProductSaleDetailService.cs" />
+    <Compile Include="Implementations\ProductService.cs" />
+    <Compile Include="Implementations\QueryEmployeeService.cs" />
+    <Compile Include="Implementations\QueryService.cs" />
+    <Compile Include="Implementations\SaleService.cs" />
+    <Compile Include="Implementations\SmsService.cs" />
+    <Compile Include="Implementations\SpecialNumberService.cs" />
+    <Compile Include="Implementations\StoreProductService.cs" />
+    <Compile Include="Implementations\StoreService.cs" />
+    <Compile Include="Implementations\SuctionModeService.cs" />
+    <Compile Include="Implementations\UncreditSaleDetailService.cs" />
+    <Compile Include="Implementations\UncreditServiceService.cs" />
+    <Compile Include="Interfaces\IAgencyService.cs" />
+    <Compile Include="Interfaces\ICenterService.cs" />
+    <Compile Include="Interfaces\ICodeService.cs" />
+    <Compile Include="Interfaces\IConditionService.cs" />
+    <Compile Include="Interfaces\ICreditSaleDetailService.cs" />
+    <Compile Include="Interfaces\ICreditServiceService.cs" />
+    <Compile Include="Interfaces\ICustomerLevelService.cs" />
+    <Compile Include="Interfaces\ICustomerService.cs" />
+    <Compile Include="Interfaces\IDocumentService.cs" />
+    <Compile Include="Interfaces\IDocumentStatusService.cs" />
+    <Compile Include="Interfaces\IEmailService.cs" />
+    <Compile Include="Interfaces\IEmployeeService.cs" />
+    <Compile Include="Interfaces\IFiscalService.cs" />
+    <Compile Include="Interfaces\IGroupService.cs" />
+    <Compile Include="Interfaces\ILevelConditionService.cs" />
+    <Compile Include="Interfaces\ILevelLevelService.cs" />
+    <Compile Include="Interfaces\ILevelService.cs" />
+    <Compile Include="Interfaces\ILevelTypeService.cs" />
+    <Compile Include="Interfaces\IMoneyAccountEmployeeService.cs" />
+    <Compile Include="Interfaces\IMoneyAccountService.cs" />
+    <Compile Include="Interfaces\INetworkCenterService.cs" />
+    <Compile Include="Interfaces\INetworkCreditService.cs" />
+    <Compile Include="Interfaces\INetworkService.cs" />
+    <Compile Include="Interfaces\INoteService.cs" />
+    <Compile Include="Interfaces\IPermissionService.cs" />
+    <Compile Include="Interfaces\IPresenceSupportService.cs" />
+    <Compile Include="Interfaces\IProblemService.cs" />
+    <Compile Include="Interfaces\IProductCategoryService.cs" />
+    <Compile Include="Interfaces\IProductLogService.cs" />
+    <Compile Include="Interfaces\IProductPriceService.cs" />
+    <Compile Include="Interfaces\IProductSaleDetailService.cs" />
+    <Compile Include="Interfaces\IProductService.cs" />
+    <Compile Include="Interfaces\IQueryEmployeeService.cs" />
+    <Compile Include="Interfaces\IQueryService.cs" />
+    <Compile Include="Interfaces\ISaleService.cs" />
+    <Compile Include="Interfaces\ISmsService.cs" />
+    <Compile Include="Interfaces\ISpecialNumberService.cs" />
+    <Compile Include="Interfaces\IStoreProductService.cs" />
+    <Compile Include="Interfaces\IStoreService.cs" />
+    <Compile Include="Interfaces\ISuctionModeService.cs" />
+    <Compile Include="Interfaces\IUncreditSaleDetailService.cs" />
+    <Compile Include="Interfaces\IUncreditServiceService.cs" />
+    <Compile Include="Mapping\AgencyMapper.cs" />
+    <Compile Include="Mapping\CenterMapper.cs" />
+    <Compile Include="Mapping\PersenceSupportMapper.cs" />
+    <Compile Include="Mapping\ProblemMapper.cs" />
+    <Compile Include="Mapping\ProductCategoryMapper.cs" />
+    <Compile Include="Mapping\CodeMapper.cs" />
+    <Compile Include="Mapping\ConditionMapper.cs" />
+    <Compile Include="Mapping\CreditSaleDetailMapper.cs" />
+    <Compile Include="Mapping\CreditServiceMapper.cs" />
+    <Compile Include="Mapping\CustomerLevelMapper.cs" />
+    <Compile Include="Mapping\CustomerMapper.cs" />
+    <Compile Include="Mapping\DocumentMapper.cs" />
+    <Compile Include="Mapping\DocumentStatusMapper.cs" />
+    <Compile Include="Mapping\EmailMapper.cs" />
+    <Compile Include="Mapping\EmployeeMapper.cs" />
+    <Compile Include="Mapping\FiscalMapper.cs" />
+    <Compile Include="Mapping\GroupMapper.cs" />
+    <Compile Include="Mapping\LevelConditionMapper.cs" />
+    <Compile Include="Mapping\LevelLevelMapper.cs" />
+    <Compile Include="Mapping\LevelMapper.cs" />
+    <Compile Include="Mapping\LevelTypeMapper.cs" />
+    <Compile Include="Mapping\MoneyAccountEmployeeMapper.cs" />
+    <Compile Include="Mapping\MoneyAccountMapper.cs" />
+    <Compile Include="Mapping\NetworkCenterMapper.cs" />
+    <Compile Include="Mapping\NetworkCreditMapper.cs" />
+    <Compile Include="Mapping\NetworkMapper.cs" />
+    <Compile Include="Mapping\NoteMapper.cs" />
+    <Compile Include="Mapping\PermissionMapper.cs" />
+    <Compile Include="Mapping\ProductLogMapper.cs" />
+    <Compile Include="Mapping\ProductMapper.cs" />
+    <Compile Include="Mapping\ProductPriceMapper.cs" />
+    <Compile Include="Mapping\ProductSaleDetailMapper.cs" />
+    <Compile Include="Mapping\QueryEmployeeMapper.cs" />
+    <Compile Include="Mapping\QueryMapper.cs" />
+    <Compile Include="Mapping\SaleMapper.cs" />
+    <Compile Include="Mapping\SmsMapper.cs" />
+    <Compile Include="Mapping\SpecialNumberMapper.cs" />
+    <Compile Include="Mapping\StoreMapper.cs" />
+    <Compile Include="Mapping\StoreProductMapper.cs" />
+    <Compile Include="Mapping\SuctionModeMapper.cs" />
+    <Compile Include="Mapping\UncreditSaleDetailMapper.cs" />
+    <Compile Include="Mapping\UncreditServiceMapper.cs" />
+    <Compile Include="Messaging\AjaxGetRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\CheckConditionResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCenterInfoResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCenterResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Messaging\CustomerCatalogService\GetNetworkCentersRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetPermissionsRequestG.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditPermissionRequestG.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetPermissionsRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\ConfirmResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\ConfirmRequest.cs" />
+    <Compile Include="Messaging\GetRequest2.cs" />
+    <Compile Include="Messaging\DeleteRequest2.cs" />
+    <Compile Include="Messaging\MoveRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddAgencyRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCenterRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCodeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddConditionRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCustomerLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddCustomerRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddDocumentRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddDocumentStatusRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddEmailRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddLevelConditionRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddLevelLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddLevelTypeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddNetworkCenterRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddNoteRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddQueryEmployeeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddQueryRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddSmsRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddSpecialNumberRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\AddSuctionModeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCenterRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditConditionRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCustomerLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCustomerRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditDocumentRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditDocumentStatusRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditEmailRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditLevelConditionRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditLevelLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditLevelRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditLevelTypeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditNetworkCenterRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditNoteRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditQueryEmployeeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditQueryRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditSmsRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditSpecialNumberRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditSuctionModeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCentersResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCodeResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCodesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditCodeRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetConditionResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetConditionsResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCustomerLevelResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCustomerLevelsResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCustomerResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetCustomersResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetDocumentResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetDocumentsResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetDocumentStatusResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetDocumentStatussResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetEmailResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetEmailsResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetLevelConditionsResponse.cs" />
+    <Compile Include="Messaging\GetGeneralResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetLevelTypesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetNetworkCentersResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetNotesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetQueryEmployeesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetQueriesResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSmssResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSpecialNumbersResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSuctionModesResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetEmployeeResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetLevelConditionResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetLevelLevelResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetLevelTypeResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetNetworkCenterResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetNoteResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetQueryEmployeeResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetQueryResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSmsResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSpecialNumberResponse.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetSuctionModeResponse.cs" />
+    <Compile Include="Messaging\DeleteRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\EditAgencyRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetAgenciesResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddEmployeeRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddGroupRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\AddPermissionRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditEmployeeRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetEmployeesResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetGroupResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetGroupsResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetPermissionResponse.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\GetPermissionsResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\EditFiscalRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditGroupRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\EditMoneyAccountEmployeeRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\EditMoneyAccountRequest.cs" />
+    <Compile Include="Messaging\EmployeeCatalogService\EditPermissionRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\AddFiscalRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\AddMoneyAccountEmployeeRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\AddMoneyAccountRequest.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetFiscalResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetFiscalsResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetMoneyAccountEmployeeResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetMoneyAccountEmployeesResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetMoneyAccountResponse.cs" />
+    <Compile Include="Messaging\FiscalCatalogService\GetMoneyAccountsResponse.cs" />
+    <Compile Include="Messaging\MoveResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddUncreditSaleDetailRequest.cs" />
+    <Compile Include="Messaging\GetRequest.cs" />
+    <Compile Include="Messaging\CustomerCatalogService\GetAgencyResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddCreditSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddProductSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddSaleRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\AddSaleResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\CloseSaleRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\DeleteSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditCreditSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditProductSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditSaleRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\EditUncreditSaleDetailRequest.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetCreditSaleDetailResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetCreditSaleDetailsResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetProductSaleDetailsResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetSalesResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetUncreditSaleDetailsResponse.cs" />
+    <Compile Include="Messaging\SearchPhrase.cs" />
+    <Compile Include="Messaging\SortRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetNetworkCreditsRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetCreditServiceDeliveryResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetCreditServiceDeliverysResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetCreditServiceResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetCreditServicesResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetNetworkCreditResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetNetworkCreditsResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetNetworkResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetProductSaleDetailResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetSaleResponse.cs" />
+    <Compile Include="Messaging\SaleCatalogService\GetUncreditSaleDetailResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddCreditServiceDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddCreditServiceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddNetworkCreditRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddNetworkRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductCategoryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductLogRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductPriceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddProductRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddStoreProductRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddStoreRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddUncreditServiceDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\AddUncreditServiceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditCreditServiceDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditCreditServiceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditNetworkCreditRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditNetworkRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditProductCategoryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditProductDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditProductLogRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditProductPriceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditProductRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditStoreProductRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditStoreRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditUncreditServiceDeliveryRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\EditUncreditServiceRequest.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetNetworksResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductCategorysResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductDeliverysResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductLogsResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductPricesResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductsResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetStoreProductsResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetStoresResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetUnCreditServiceDeliverysResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetUnCreditServicesResponse.cs" />
+    <Compile Include="Messaging\SupportCatalogService\GetPresenceSupportResponse.cs" />
+    <Compile Include="Messaging\SupportCatalogService\GetPresenceSupportsResponse.cs" />
+    <Compile Include="Messaging\SupportCatalogService\GetProblemResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductCategoryResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductDeliveryResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductLogResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductPriceResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetProductResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetStoreProductResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetStoreResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetUnCreditServiceDeliveryResponse.cs" />
+    <Compile Include="Messaging\StoreCatalogService\GetUncreditServiceResponse.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddPresenceSupportRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\AddProblemRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditPresenceSupportRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\EditProblemRequest.cs" />
+    <Compile Include="Messaging\SupportCatalogService\GetProblemsResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Ami\AmiView.cs" />
+    <Compile Include="ViewModels\Customers\AnswerView.cs" />
+    <Compile Include="ViewModels\Customers\CallLogView.cs" />
+    <Compile Include="ViewModels\Customers\ColumnViews.cs" />
+    <Compile Include="ViewModels\Customers\AgencyView.cs" />
+    <Compile Include="ViewModels\Customers\CenterView.cs" />
+    <Compile Include="ViewModels\Customers\CityView.cs" />
+    <Compile Include="ViewModels\Customers\CodeView.cs" />
+    <Compile Include="ViewModels\Customers\ConditionView.cs" />
+    <Compile Include="ViewModels\Customers\BuyPossibilityView.cs" />
+    <Compile Include="ViewModels\Customers\CustomerContactTemplateView.cs" />
+    <Compile Include="ViewModels\Customers\NetworkCenterPriorityView.cs" />
+    <Compile Include="ViewModels\Customers\QuestionAnswerView.cs" />
+    <Compile Include="ViewModels\Customers\QuestionView.cs" />
+    <Compile Include="ViewModels\Customers\SimpleCustomerView.cs" />
+    <Compile Include="ViewModels\Employees\BonusComissionView.cs" />
+    <Compile Include="ViewModels\Employees\CampaignAgentView.cs" />
+    <Compile Include="ViewModels\Employees\CourierEmployeeView.cs" />
+    <Compile Include="ViewModels\Customers\FollowStatusView.cs" />
+    <Compile Include="ViewModels\Customers\LevelOptionsView.cs" />
+    <Compile Include="ViewModels\Customers\GraphicalPropertiesView.cs" />
+    <Compile Include="ViewModels\Customers\LevelConditionView2.cs" />
+    <Compile Include="ViewModels\Customers\CustomerLevelView.cs" />
+    <Compile Include="ViewModels\Customers\CustomerView.cs" />
+    <Compile Include="ViewModels\Customers\DocumentStatusView.cs" />
+    <Compile Include="ViewModels\Customers\DocumentView.cs" />
+    <Compile Include="ViewModels\Customers\EmailView.cs" />
+    <Compile Include="ViewModels\Customers\LevelConditionView.cs" />
+    <Compile Include="ViewModels\Customers\LevelLevelView.cs" />
+    <Compile Include="ViewModels\Customers\LevelTypeView.cs" />
+    <Compile Include="ViewModels\Customers\LevelView.cs" />
+    <Compile Include="ViewModels\Customers\NetworkCenterView.cs" />
+    <Compile Include="ViewModels\Customers\NoteView.cs" />
+    <Compile Include="ViewModels\Customers\ProvinceView.cs" />
+    <Compile Include="ViewModels\Customers\QueryEmployeeView.cs" />
+    <Compile Include="ViewModels\Customers\QueryView.cs" />
+    <Compile Include="ViewModels\Customers\SmsView.cs" />
+    <Compile Include="ViewModels\Customers\SpecialNumberView.cs" />
+    <Compile Include="ViewModels\Customers\SuctionModeDetailview.cs" />
+    <Compile Include="ViewModels\Customers\SuctionModeView.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeWithChildView.cs" />
+    <Compile Include="ViewModels\Employees\GroupTreeView.cs" />
+    <Compile Include="ViewModels\Employees\LocalPhoneStoreEmployeeView.cs" />
+    <Compile Include="ViewModels\Employees\LocalPhoneStoreView.cs" />
+    <Compile Include="ViewModels\Employees\LocalPhoneView.cs" />
+    <Compile Include="ViewModels\Employees\EmployeeView.cs" />
+    <Compile Include="ViewModels\Employees\GroupView.cs" />
+    <Compile Include="ViewModels\Employees\MessageTemplateView.cs" />
+    <Compile Include="ViewModels\Employees\NotificationView.cs" />
+    <Compile Include="ViewModels\Employees\PermissionView.cs" />
+    <Compile Include="ViewModels\Employees\PermitView.cs" />
+    <Compile Include="ViewModels\Employees\QueueLocalPhoneStoreInfoView.cs" />
+    <Compile Include="ViewModels\Employees\QueueLocalPhoneStoreView.cs" />
+    <Compile Include="ViewModels\Employees\QueueView.cs" />
+    <Compile Include="ViewModels\Employees\SimpleEmployeeView.cs" />
+    <Compile Include="ViewModels\Employees\SimpleGroupView.cs" />
+    <Compile Include="ViewModels\Employees\SmsEmployeeView.cs" />
+    <Compile Include="ViewModels\Employees\TaskOwnView.cs" />
+    <Compile Include="ViewModels\Employees\ToDoResultView.cs" />
+    <Compile Include="ViewModels\Employees\ToDoView.cs" />
+    <Compile Include="ViewModels\Leads\LeadResultTemplateView.cs" />
+    <Compile Include="ViewModels\Leads\LeadTitleTemplateView.cs" />
+    <Compile Include="ViewModels\Leads\NegotiationView.cs" />
+    <Compile Include="ViewModels\Leads\PopUpNegotiationView.cs" />
+    <Compile Include="ViewModels\Reports\BonusMasterReportView.cs" />
+    <Compile Include="ViewModels\Reports\BonusComissionReportView.cs" />
+    <Compile Include="ViewModels\Reports\CanDeliverCostView.cs" />
+    <Compile Include="ViewModels\Reports\CenterReportView.cs" />
+    <Compile Include="ViewModels\Reports\GetBankCasheReportView.cs" />
+    <Compile Include="ViewModels\Reports\GetSaleDetailReportView.cs" />
+    <Compile Include="ViewModels\Reports\GetSuctionModeCost1View.cs" />
+    <Compile Include="ViewModels\Reports\GetSuctionModeCost3View.cs" />
+    <Compile Include="ViewModels\Reports\InstallFormReportView.cs" />
+    <Compile Include="ViewModels\Reports\LedgerAccountSammaryView.cs" />
+    <Compile Include="ViewModels\Reports\SlideShowEmployeeView.cs" />
+    <Compile Include="ViewModels\Reports\SuctionModeReportView.cs" />
+    <Compile Include="ViewModels\Sales\CampaignPaymentView.cs" />
+    <Compile Include="ViewModels\Sales\ClientSaleDetailView.cs" />
+    <Compile Include="ViewModels\Sales\CourierView.cs" />
+    <Compile Include="ViewModels\Sales\GeneralSaleDetailView.cs" />
+    <Compile Include="ViewModels\Sales\ProductionView.cs" />
+    <Compile Include="ViewModels\Sales\SimpleSaleView.cs" />
+    <Compile Include="ViewModels\Support\SupportDeliverServiceView.cs" />
+    <Compile Include="ViewModels\Support\SupportExpertDispatchView.cs" />
+    <Compile Include="ViewModels\Support\SupportInstallationDelayView.cs" />
+    <Compile Include="ViewModels\Support\SupportOwnView.cs" />
+    <Compile Include="ViewModels\Support\SupportPhoneInstallationView.cs" />
+    <Compile Include="ViewModels\Support\SupportQcProblemView.cs" />
+    <Compile Include="ViewModels\Support\SupportQcView.cs" />
+    <Compile Include="ViewModels\Support\SupportStatusRelationView.cs" />
+    <Compile Include="ViewModels\Support\SupportStatusView.cs" />
+    <Compile Include="ViewModels\Support\SupportTicketWaitingResponseView.cs" />
+    <Compile Include="ViewModels\Support\SupportTicketWaitingView.cs" />
+    <Compile Include="ViewModels\Support\SupportView.cs" />
+    <Compile Include="ViewModels\SystemCountersView.cs" />
+    <Compile Include="ViewModels\Fiscals\FiscalView.cs" />
+    <Compile Include="ViewModels\Fiscals\MoneyAccountEmployeeView.cs" />
+    <Compile Include="ViewModels\Fiscals\MoneyAccountView.cs" />
+    <Compile Include="ViewModels\MainMenuView.cs" />
+    <Compile Include="ViewModels\Sales\BaseSaleDetailView.cs" />
+    <Compile Include="ViewModels\Sales\CreditSaleDetailView.cs" />
+    <Compile Include="ViewModels\Sales\ProductSaleDetailView.cs" />
+    <Compile Include="ViewModels\Sales\SaleView.cs" />
+    <Compile Include="ViewModels\Sales\UncreditSaleDetailView.cs" />
+    <Compile Include="ViewModels\Store\CreditServiceDeliveryView.cs" />
+    <Compile Include="ViewModels\Store\CreditServiceView.cs" />
+    <Compile Include="ViewModels\Store\NetworkCreditView.cs" />
+    <Compile Include="ViewModels\Store\NetworkView.cs" />
+    <Compile Include="ViewModels\Store\ProductCategoryView.cs" />
+    <Compile Include="ViewModels\Store\ProductDeliveryView.cs" />
+    <Compile Include="ViewModels\Store\ProductLogView.cs" />
+    <Compile Include="ViewModels\Store\ProductPriceView.cs" />
+    <Compile Include="ViewModels\Store\ProductView.cs" />
+    <Compile Include="ViewModels\Store\StoreProductView.cs" />
+    <Compile Include="ViewModels\Store\StoreView.cs" />
+    <Compile Include="ViewModels\Store\UncreditServiceDeliveryView.cs" />
+    <Compile Include="ViewModels\Store\UncreditServiceView.cs" />
+    <Compile Include="ViewModels\Support\PersenceSupportView.cs" />
+    <Compile Include="ViewModels\Support\ProblemView.cs" />
+    <Compile Include="ViewModels\BaseView.cs" />
+    <Compile Include="ViewModels\ToDoResultViewModel.cs" />
+    <Compile Include="Web References\MVReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{04FF1AF6-8E8D-43A8-8634-776DFE412913}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{5CDB5229-AB25-4896-BF5A-2A31088429BF}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MVReference\DeviceWSDL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MVReference\MonitoringController.wsdl" />
+    <None Include="Web References\MVReference\QueueWSDL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MVReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.16.110/mv-bootstrap/webservice/monitoring/wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MVReference\</RelPath>
+      <UpdateFromURL>http://192.168.16.110/mv-bootstrap/webservice/monitoring/wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ort_MVReference_MonitoringControllerService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5CDB5229-AB25-4896-BF5A-2A31088429BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.7.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\Lib\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auditing.cs" />
+    <Compile Include="Base\BusinessRule.cs" />
+    <Compile Include="Base\EntityBaseComplexID.cs" />
+    <Compile Include="Base\EntityBase.cs" />
+    <Compile Include="Base\Validations\EntityBaseBusinessRules.cs" />
+    <Compile Include="Base\Validations\PersianDateTimeValidationSpecification.cs" />
+    <Compile Include="Base\ValueObjectBase.cs" />
+    <Compile Include="Base\Validations\ValueObjectIsInvalidException.cs" />
+    <Compile Include="Customers\Agency.cs" />
+    <Compile Include="Customers\Answer.cs" />
+    <Compile Include="Customers\Center.cs" />
+    <Compile Include="Customers\City.cs" />
+    <Compile Include="Customers\Code.cs" />
+    <Compile Include="Customers\Condition.cs" />
+    <Compile Include="Customers\BuyPossibility.cs" />
+    <Compile Include="Customers\CallLog.cs" />
+    <Compile Include="Customers\CustomerContactTemplate.cs" />
+    <Compile Include="Customers\FollowStatus.cs" />
+    <Compile Include="Customers\NetworkCenterPriority.cs" />
+    <Compile Include="Customers\Province.cs" />
+    <Compile Include="Customers\QueryEmployee.cs" />
+    <Compile Include="Customers\Question.cs" />
+    <Compile Include="Customers\QuestionAnswer.cs" />
+    <Compile Include="Customers\SimpleCustomer.cs" />
+    <Compile Include="Customers\SuctionModeDetail.cs" />
+    <Compile Include="Customers\Validations\AnswerBusinessRule.cs" />
+    <Compile Include="Customers\Validations\CallLogBusinessRule.cs" />
+    <Compile Include="Customers\Validations\CityBusinessRules.cs" />
+    <Compile Include="Customers\Validations\CustomerContactBusinessRule.cs" />
+    <Compile Include="Customers\Validations\CustomerContactTemplateBusinessRule.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IAnswerRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICallLogRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICityRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICustomerContactTemplateRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IFollowStatusRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IBuyPossibilityRepository.cs" />
+    <Compile Include="Customers\LevelOptions.cs" />
+    <Compile Include="Customers\Customer.cs" />
+    <Compile Include="Customers\CustomerLevel.cs" />
+    <Compile Include="Customers\Document.cs" />
+    <Compile Include="Customers\Email.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IAgencyRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICenterRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICodeRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IConditionRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICostomerLevelRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ICustomerRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IDocumentRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IDocumentStatusRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IEmailRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ILevelConditionRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ILevelLevelRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ILevelRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ILevelTypeRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\INetworkCenterPriorityRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\INetworkCenterRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\INoteRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IProvinceRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IQueryEmployeeRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IQueryRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IQuestionRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ISimpleCustomerRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ISmsRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ISpecialNumberRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ISuctionModeDetailRepository.cs" />
+    <Compile Include="Customers\Validations\Interfaces\ISuctionModeRepository.cs" />
+    <Compile Include="Customers\Level.cs" />
+    <Compile Include="Customers\LevelCondition.cs" />
+    <Compile Include="Customers\LevelLevel.cs" />
+    <Compile Include="Customers\LevelType.cs" />
+    <Compile Include="Customers\NetworkCenter.cs" />
+    <Compile Include="Customers\NetworkCenterStatus.cs" />
+    <Compile Include="Customers\Note.cs" />
+    <Compile Include="Customers\GraphicalProperties.cs" />
+    <Compile Include="Customers\Sms.cs" />
+    <Compile Include="Customers\SpecialNumber.cs" />
+    <Compile Include="Customers\Validations\AgencyBusinessRules.cs" />
+    <Compile Include="Customers\Validations\CenterBusinessRules.cs" />
+    <Compile Include="Customers\Validations\CodeBusinessRules.cs" />
+    <Compile Include="Customers\Validations\ConditionBusinessRules.cs" />
+    <Compile Include="Customers\Validations\BuyPossibilityBusinessRules.cs" />
+    <Compile Include="Customers\Validations\FollowStatusBusinessRules.cs" />
+    <Compile Include="Customers\Validations\CustomerLevelBusinessRules.cs" />
+    <Compile Include="Customers\Validations\DocumentBusinessRules.cs" />
+    <Compile Include="Customers\Validations\DocumentStatusBusinessRules.cs" />
+    <Compile Include="Customers\Validations\EmailBusinessRules.cs" />
+    <Compile Include="Customers\Validations\Interfaces\IQuestionAnswerRepository.cs" />
+    <Compile Include="Customers\Validations\LevelBusinessRules.cs" />
+    <Compile Include="Customers\Validations\LevelConditionBusinessRules.cs" />
+    <Compile Include="Customers\Validations\LevelLevelBusinessRules.cs" />
+    <Compile Include="Customers\Validations\LevelTypeBusinessRules.cs" />
+    <Compile Include="Customers\Validations\NetworkCenterBusinessRules.cs" />
+    <Compile Include="Customers\Validations\NoteBusinessRules.cs" />
+    <Compile Include="Customers\Validations\ProvinceBusinessRules.cs" />
+    <Compile Include="Customers\Validations\QueryEmployeeBusinessRules.cs" />
+    <Compile Include="Customers\Validations\QuestionBuisinessRule.cs" />
+    <Compile Include="Customers\Validations\QueueBusinessRule.cs" />
+    <Compile Include="Customers\Validations\SmsBusinessRules.cs" />
+    <Compile Include="Customers\Validations\SpecialNumberBusinessRules.cs" />
+    <Compile Include="Customers\Validations\SuctionModeBusinessRules.cs" />
+    <Compile Include="Customers\Validations\QueryBusinessRules.cs" />
+    <Compile Include="Customers\Query.cs" />
+    <Compile Include="Customers\Validations\SuctionModeDetailBusinessRules.cs" />
+    <Compile Include="Employees\BonusComission.cs" />
+    <Compile Include="Employees\CampaignAgent.cs" />
+    <Compile Include="Employees\CourierEmployee.cs" />
+    <Compile Include="Employees\Interfaces\IBonusComissionRepository.cs" />
+    <Compile Include="Employees\Interfaces\ICampaignAgentRepository.cs" />
+    <Compile Include="Employees\Interfaces\ICourierEmployeeRepository.cs" />
+    <Compile Include="Employees\Interfaces\ILocalPhoneStoreEmployeeRepository.cs" />
+    <Compile Include="Employees\Interfaces\ILocalPhoneStoreRepository.cs" />
+    <Compile Include="Employees\Interfaces\IMessageTemplateRepository.cs" />
+    <Compile Include="Employees\Interfaces\INotificationRepository.cs" />
+    <Compile Include="Employees\Interfaces\IPermitRepository.cs" />
+    <Compile Include="Employees\Interfaces\ILocalPhoneRepository.cs" />
+    <Compile Include="Employees\Interfaces\IQueueLocalPhoneStoreRepository.cs" />
+    <Compile Include="Employees\Interfaces\IQueueRepository.cs" />
+    <Compile Include="Employees\Interfaces\ISimpleEmployeeRepository.cs" />
+    <Compile Include="Employees\Interfaces\ISmsEmployeeRepository.cs" />
+    <Compile Include="Employees\Interfaces\ITaskRepository.cs" />
+    <Compile Include="Employees\Interfaces\IToDoRepository.cs" />
+    <Compile Include="Employees\Interfaces\IToDoResultRepository.cs" />
+    <Compile Include="Employees\LocalPhone.cs" />
+    <Compile Include="Employees\Interfaces\IEmployeeRepository.cs" />
+    <Compile Include="Employees\Interfaces\IGroupRepository.cs" />
+    <Compile Include="Employees\Interfaces\IPermissionRepository.cs" />
+    <Compile Include="Employees\LocalPhoneStoreEmployee.cs" />
+    <Compile Include="Employees\LocalPhoneStore.cs" />
+    <Compile Include="Employees\MessageTemplate.cs" />
+    <Compile Include="Employees\Notification.cs" />
+    <Compile Include="Employees\Permission.cs" />
+    <Compile Include="Employees\Permit.cs" />
+    <Compile Include="Employees\Queue.cs" />
+    <Compile Include="Employees\QueueLocalPhoneStore.cs" />
+    <Compile Include="Employees\SimpleEmployee.cs" />
+    <Compile Include="Employees\SmsEmployee.cs" />
+    <Compile Include="Employees\Task.cs" />
+    <Compile Include="Employees\ToDo.cs" />
+    <Compile Include="Employees\ToDoResult.cs" />
+    <Compile Include="Employees\Validations\CampaignAgentBusinessRule.cs" />
+    <Compile Include="Employees\Validations\CourierEmployeeBusinessRules.cs" />
+    <Compile Include="Employees\Validations\LocalPhoneEmployeeBusinessRule.cs" />
+    <Compile Include="Employees\Validations\MessageTemplateBusinessRule.cs" />
+    <Compile Include="Employees\Validations\NotificationBusinessRule.cs" />
+    <Compile Include="Employees\Validations\QueueLocalPhoneBusinessRule.cs" />
+    <Compile Include="Employees\Validations\SimpleEmployeeBusinessrules.cs" />
+    <Compile Include="Employees\Validations\SmsEmployeeBusinessRule.cs" />
+    <Compile Include="Employees\Validations\TaskBusinessRule.cs" />
+    <Compile Include="Employees\Validations\ToDoBusinessRules.cs" />
+    <Compile Include="Employees\Validations\ToDoResultBusinessRules.cs" />
+    <Compile Include="Interfaces\ISystemCountersRepository.cs" />
+    <Compile Include="Leads\Interfaces\ILeadResultTemplateRepository.cs" />
+    <Compile Include="Leads\Interfaces\ILeadTitleTemplateRepository.cs" />
+    <Compile Include="Leads\Interfaces\INegotiationRepository.cs" />
+    <Compile Include="Leads\LeadResultTemplate.cs" />
+    <Compile Include="Leads\LeadTitleTemplate.cs" />
+    <Compile Include="Leads\Negotiation.cs" />
+    <Compile Include="Leads\Validation\LeadResultTemplateBusinessRule.cs" />
+    <Compile Include="Leads\Validation\LeadTitleTemplateBusinessRule.cs" />
+    <Compile Include="Leads\Validation\NegotioationBusinessRule.cs" />
+    <Compile Include="Sales\CampaignPayment.cs" />
+    <Compile Include="Sales\Courier.cs" />
+    <Compile Include="Sales\Interfaces\ICampaignPaymentRepository.cs" />
+    <Compile Include="Sales\Interfaces\ICourierRepository.cs" />
+    <Compile Include="Sales\SuctionModeCost.cs" />
+    <Compile Include="Sales\Validations\CampaignPaymentBusinessRule.cs" />
+    <Compile Include="Sales\Validations\CourierBusinessRules.cs" />
+    <Compile Include="Support\Interfaces\ISupportExpertDispatchRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportDeliverServiceRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportInstallationDelayRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportPhoneInstallationRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportQcProblemRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportQcRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportStatusRelationRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportStatusRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportTicketWaitingRepository.cs" />
+    <Compile Include="Support\Interfaces\ISupportTicketWitingResponseRepository.cs" />
+    <Compile Include="Support\SuportStatusRelation.cs" />
+    <Compile Include="Support\SupportExpertDispatch.cs" />
+    <Compile Include="Support\Support.cs" />
+    <Compile Include="Support\SupportDeliverService.cs" />
+    <Compile Include="Support\SupportInstallationDelay.cs" />
+    <Compile Include="Support\SupportPhoneInstallation.cs" />
+    <Compile Include="Support\SupportQc.cs" />
+    <Compile Include="Support\SupportQcProblem.cs" />
+    <Compile Include="Support\SupportStatus.cs" />
+    <Compile Include="Support\SupportTicketWaiting.cs" />
+    <Compile Include="Support\SupportTicketWaitingResponse.cs" />
+    <Compile Include="Support\Validations\SupporExpertDispatchBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportDeliverServiceBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportInstallationDelayBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportPhoneInstallationBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportQcBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportQcProblemBusinnessRule.cs" />
+    <Compile Include="Support\Validations\SupportRelationBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportStatusBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportTicketWaitingBusinessRule.cs" />
+    <Compile Include="Support\Validations\SupportTicketWaitingResponseBusinessRule.cs" />
+    <Compile Include="SystemCounters.cs" />
+    <Compile Include="Sales\UncreditSaleDetailBase.cs" />
+    <Compile Include="Employees\Validations\EmployeeBusinessRules.cs" />
+    <Compile Include="Employees\Validations\GroupBusinessRules.cs" />
+    <Compile Include="Employees\Validations\PermissionBusinessRules.cs" />
+    <Compile Include="ErrorLog.cs" />
+    <Compile Include="EventLog.cs" />
+    <Compile Include="Customers\Validations\CustomerBusinessRules.cs" />
+    <Compile Include="Customers\DocumentStatus.cs" />
+    <Compile Include="Customers\Validations\EmailValidationSpecification.cs" />
+    <Compile Include="Customers\Validations\InvalidCustomerException.cs" />
+    <Compile Include="Fiscals\Fiscal.cs" />
+    <Compile Include="Fiscals\Interfaces\IFiscalRepository.cs" />
+    <Compile Include="Fiscals\Interfaces\IMoneyAccountEmployeeRepository.cs" />
+    <Compile Include="Fiscals\Interfaces\IMoneyAccountRepository.cs" />
+    <Compile Include="Fiscals\MoneyAccount.cs" />
+    <Compile Include="Fiscals\MoneyAccountEmployee.cs" />
+    <Compile Include="Fiscals\Validations\FiscalBusinessRules.cs" />
+    <Compile Include="Fiscals\Validations\MoneyAccountBusinessRules.cs" />
+    <Compile Include="Fiscals\Validations\MoneyAccountEmployeeBusinessRules.cs" />
+    <Compile Include="GeneralSettings.cs" />
+    <Compile Include="Interfaces\IMainMenuRepository.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="Sales\BaseSaleDetail.cs" />
+    <Compile Include="Sales\CreditSaleDetail.cs" />
+    <Compile Include="Sales\Interfaces\ICreditSaleDetailRepository.cs" />
+    <Compile Include="Sales\Interfaces\IProductSaleDetailRepository.cs" />
+    <Compile Include="Sales\Interfaces\ISaleRepository.cs" />
+    <Compile Include="Sales\Interfaces\IUncreditSaleDetailRepository.cs" />
+    <Compile Include="Sales\ProductSaleDetail.cs" />
+    <Compile Include="Sales\SaleDetailStatus.cs" />
+    <Compile Include="Sales\Sale.cs" />
+    <Compile Include="Sales\UncreditSaleDetail.cs" />
+    <Compile Include="Sales\Validations\CreditSaleDetailBusinessRules.cs" />
+    <Compile Include="Sales\Validations\ProductSaleDetailBusinessRules.cs" />
+    <Compile Include="Sales\Validations\SaleBusinessRules.cs" />
+    <Compile Include="Sales\Validations\UncreditSaleDetailBusinessRules.cs" />
+    <Compile Include="Store\CreditService.cs" />
+    <Compile Include="Store\Interfaces\ICreditServiceRepository.cs" />
+    <Compile Include="Store\Interfaces\INetworkCreditRepository.cs" />
+    <Compile Include="Store\Interfaces\INetworkRepository.cs" />
+    <Compile Include="Store\Interfaces\IProductCategoryRepository.cs" />
+    <Compile Include="Store\Interfaces\IProductLogRepository.cs" />
+    <Compile Include="Store\Interfaces\IProductPriceRepository.cs" />
+    <Compile Include="Store\Interfaces\IProductRepository.cs" />
+    <Compile Include="Store\Interfaces\IStoreProductRepository.cs" />
+    <Compile Include="Store\Interfaces\IStoreRepository.cs" />
+    <Compile Include="Store\Interfaces\IUncreditServiceRepository.cs" />
+    <Compile Include="Store\NetworkCredit.cs" />
+    <Compile Include="Store\Product.cs" />
+    <Compile Include="Store\ProductCategory.cs" />
+    <Compile Include="Store\ProductLog.cs" />
+    <Compile Include="Store\ProductPrice.cs" />
+    <Compile Include="Store\Store.cs" />
+    <Compile Include="Store\StoreProduct.cs" />
+    <Compile Include="Store\UncreditService.cs" />
+    <Compile Include="Store\Validations\CreditServiceBusinessRules.cs" />
+    <Compile Include="Store\Validations\CreditServiceDeliveryBusinessRules.cs" />
+    <Compile Include="Store\Validations\NetworkBusinessRules.cs" />
+    <Compile Include="Store\Validations\NetworkCreditBusinessRules.cs" />
+    <Compile Include="Store\Validations\ProductBusinessRules.cs" />
+    <Compile Include="Store\Validations\ProductCategoryBusinessRules.cs" />
+    <Compile Include="Store\Validations\ProductDeliveryBusinessRules.cs" />
+    <Compile Include="Store\Validations\ProductLogBusinessRules.cs" />
+    <Compile Include="Store\Validations\ProductPriceBusinessRules.cs" />
+    <Compile Include="Store\Validations\StoreBusinessRules.cs" />
+    <Compile Include="Store\Validations\StoreProductBusinessRules.cs" />
+    <Compile Include="Store\Validations\UncreditServiceBusinessRules.cs" />
+    <Compile Include="Store\Validations\UncreditServiceDeliveryBusinessRules.cs" />
+    <Compile Include="Store\Network.cs" />
+    <Compile Include="Customers\SuctionMode.cs" />
+    <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\Group.cs" />
+    <Compile Include="Employees\Validations\InvalidEmployeeException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\Interfaces\IPresenceSupportRepository.cs" />
+    <Compile Include="Support\Interfaces\IProblemRepository.cs" />
+    <Compile Include="Support\PersenceSupport.cs" />
+    <Compile Include="Support\Problem.cs" />
+    <Compile Include="Support\Validations\PresenceSupportBusinessRules.cs" />
+    <Compile Include="Support\Validations\ProblemBusinessRules.cs" />
+    <Compile Include="TextConvert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{04FF1AF6-8E8D-43A8-8634-776DFE412913}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
